@@ -1,7 +1,7 @@
 resource "aws_security_group" "dove-sg" {
   name        = "dove-sg"
   description = "dove-sg"
-  vpc_id = "vpc-005cd965" #Put sandbox-vpc ID ####
+  vpc_id = "xxxxx" #Put sandbox-vpc ID ####
 
   tags = {
     Name = "dove-sg"
@@ -10,7 +10,7 @@ resource "aws_security_group" "dove-sg" {
 
 resource "aws_vpc_security_group_ingress_rule" "sshfromyIP" {
   security_group_id = aws_security_group.dove-sg.id
-  cidr_ipv4         = "112.135.201.235/32"
+  cidr_ipv4         = "112.135.201.235/32" #Put EC2 Access IP ####
   from_port         = 22
   ip_protocol       = "tcp"
   to_port           = 22
