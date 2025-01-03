@@ -1,4 +1,4 @@
-# Specify the backend configuration for storing Terraform state files in S3.
+# Specify the backend configuration for storing Terraform state files in S3 bucket.
 terraform {
   backend "s3" {
     # The S3 bucket where the Terraform state file will be stored.
