@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: vpro-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/use-regex: "true" # this annotation is used to enable the use of regex in the ingress rules
+spec:
+  ingressClassName: nginx-example
+  rules:
+  - host: vproapp.com # this is the host that the ingress will be listening on domain name
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: vproapp-service
+            port:
+              number: 8080
