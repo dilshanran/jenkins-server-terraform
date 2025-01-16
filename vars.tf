@@ -14,6 +14,6 @@ variable "amiID" {
   }
 }
 
-  variable "webuser" { 
-    default = "ubuntu"
-  }
+variable "webuser" {
+  default = "ubuntu"
+}
