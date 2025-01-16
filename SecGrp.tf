@@ -1,7 +1,7 @@
 resource "aws_security_group" "dove-sg" {
   name        = "dove-sg"
   description = "dove-sg"
-  vpc_id      = "vpc-07fa2ee0d82d82ccc" #Put sandbox-vpc ID ####
+  vpc_id      = "vpc-07fa2ee" #Put sandbox-vpc ID ####
 
   tags = {
     Name = "dove-sg"
